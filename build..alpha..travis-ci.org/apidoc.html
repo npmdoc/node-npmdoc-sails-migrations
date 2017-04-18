@@ -1,0 +1,501 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/BlueHotDog/sails-migrations"
+
+    >sails-migrations (v2.0.10)</a>
+</h1>
+<h4>The missing, migrations, arm of the octopus</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sails-migrations">module sails-migrations</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-migrations.createDatabase">
+            function <span class="apidocSignatureSpan">sails-migrations.</span>createDatabase
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-migrations.currentVersion">
+            function <span class="apidocSignatureSpan">sails-migrations.</span>currentVersion
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-migrations.dropDatabase">
+            function <span class="apidocSignatureSpan">sails-migrations.</span>dropDatabase
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-migrations.generate">
+            function <span class="apidocSignatureSpan">sails-migrations.</span>generate
+            <span class="apidocSignatureSpan">(name, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-migrations.migrate">
+            function <span class="apidocSignatureSpan">sails-migrations.</span>migrate
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-migrations.rollback">
+            function <span class="apidocSignatureSpan">sails-migrations.</span>rollback
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-migrations.status">
+            function <span class="apidocSignatureSpan">sails-migrations.</span>status
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sails-migrations.</span>sails_migrations</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sails-migrations.sails_migrations">module sails-migrations.sails_migrations</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-migrations.sails_migrations.createDatabase">
+            function <span class="apidocSignatureSpan">sails-migrations.sails_migrations.</span>createDatabase
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-migrations.sails_migrations.currentVersion">
+            function <span class="apidocSignatureSpan">sails-migrations.sails_migrations.</span>currentVersion
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-migrations.sails_migrations.dropDatabase">
+            function <span class="apidocSignatureSpan">sails-migrations.sails_migrations.</span>dropDatabase
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-migrations.sails_migrations.generate">
+            function <span class="apidocSignatureSpan">sails-migrations.sails_migrations.</span>generate
+            <span class="apidocSignatureSpan">(name, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-migrations.sails_migrations.migrate">
+            function <span class="apidocSignatureSpan">sails-migrations.sails_migrations.</span>migrate
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-migrations.sails_migrations.rollback">
+            function <span class="apidocSignatureSpan">sails-migrations.sails_migrations.</span>rollback
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-migrations.sails_migrations.status">
+            function <span class="apidocSignatureSpan">sails-migrations.sails_migrations.</span>status
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sails-migrations" id="apidoc.module.sails-migrations">module sails-migrations</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sails-migrations.createDatabase" id="apidoc.element.sails-migrations.createDatabase">
+        function <span class="apidocSignatureSpan">sails-migrations.</span>createDatabase
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createDatabase() {
+  return ConfigLoader.load().then(function(config){
+    return Promise.promisify(databaseTasks.create)(config).then(function() {
+      return config;
+    })
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sails-migrations.currentVersion" id="apidoc.element.sails-migrations.currentVersion">
+        function <span class="apidocSignatureSpan">sails-migrations.</span>currentVersion
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function currentVersion(){
+  return ConfigLoader.load().then(function(config){
+    return knex(config).migrate.currentVersion();
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sails-migrations.dropDatabase" id="apidoc.element.sails-migrations.dropDatabase">
+        function <span class="apidocSignatureSpan">sails-migrations.</span>dropDatabase
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function dropDatabase(){
+  return ConfigLoader.load().then(function(config){
+    return Promise.promisify(databaseTasks.drop)(config).then(function(config) {
+      return config;
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sails-migrations.generate" id="apidoc.element.sails-migrations.generate">
+        function <span class="apidocSignatureSpan">sails-migrations.</span>generate
+        <span class="apidocSignatureSpan">(name, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function generateMigration(name, options) {
+  name = getMigrationName(name);
+  return migratorLoader.load().then(function(migrator) {
+    return migrator.make(name, options)
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sails-migrations.migrate" id="apidoc.element.sails-migrations.migrate">
+        function <span class="apidocSignatureSpan">sails-migrations.</span>migrate
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function latest() {
+  return migratorLoader.load().then(function(migrator) {
+    var dbDir = path.resolve(migrator.config.directory);
+    if (fs.existsSync(dbDir)) {
+      return migrator.latest()
+    } else {
+      throw new errors.MigrationsFolderDoesNotExists(dbDir + &#x22; does not exists&#x22;, migrator.config);
+    }
+  })
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sails-migrations.rollback" id="apidoc.element.sails-migrations.rollback">
+        function <span class="apidocSignatureSpan">sails-migrations.</span>rollback
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function rollback(){
+  return ConfigLoader.load().then(function(config){
+    return knex(config).migrate.rollback();
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sails-migrations.status" id="apidoc.element.sails-migrations.status">
+        function <span class="apidocSignatureSpan">sails-migrations.</span>status
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function status() {
+  return ConfigLoader.load().then(function (config) {
+    var knexInstance = knex(config);
+    return knexInstance.schema.hasTable(config.migrations.tableName).then(function(exists) {
+      if(exists) {
+        return knexInstance.select(&#x27;*&#x27;).from(config.migrations.tableName).orderBy(&#x27;id&#x27;)
+      } else {
+        return []
+      }
+    }).then(function(completed) {
+      return [knexInstance.migrate._listAll(), completed]
+    })
+  });
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sails-migrations.sails_migrations" id="apidoc.module.sails-migrations.sails_migrations">module sails-migrations.sails_migrations</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sails-migrations.sails_migrations.createDatabase" id="apidoc.element.sails-migrations.sails_migrations.createDatabase">
+        function <span class="apidocSignatureSpan">sails-migrations.sails_migrations.</span>createDatabase
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createDatabase() {
+  return ConfigLoader.load().then(function(config){
+    return Promise.promisify(databaseTasks.create)(config).then(function() {
+      return config;
+    })
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sails-migrations.sails_migrations.currentVersion" id="apidoc.element.sails-migrations.sails_migrations.currentVersion">
+        function <span class="apidocSignatureSpan">sails-migrations.sails_migrations.</span>currentVersion
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function currentVersion(){
+  return ConfigLoader.load().then(function(config){
+    return knex(config).migrate.currentVersion();
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sails-migrations.sails_migrations.dropDatabase" id="apidoc.element.sails-migrations.sails_migrations.dropDatabase">
+        function <span class="apidocSignatureSpan">sails-migrations.sails_migrations.</span>dropDatabase
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function dropDatabase(){
+  return ConfigLoader.load().then(function(config){
+    return Promise.promisify(databaseTasks.drop)(config).then(function(config) {
+      return config;
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sails-migrations.sails_migrations.generate" id="apidoc.element.sails-migrations.sails_migrations.generate">
+        function <span class="apidocSignatureSpan">sails-migrations.sails_migrations.</span>generate
+        <span class="apidocSignatureSpan">(name, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function generateMigration(name, options) {
+  name = getMigrationName(name);
+  return migratorLoader.load().then(function(migrator) {
+    return migrator.make(name, options)
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sails-migrations.sails_migrations.migrate" id="apidoc.element.sails-migrations.sails_migrations.migrate">
+        function <span class="apidocSignatureSpan">sails-migrations.sails_migrations.</span>migrate
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function latest() {
+  return migratorLoader.load().then(function(migrator) {
+    var dbDir = path.resolve(migrator.config.directory);
+    if (fs.existsSync(dbDir)) {
+      return migrator.latest()
+    } else {
+      throw new errors.MigrationsFolderDoesNotExists(dbDir + &#x22; does not exists&#x22;, migrator.config);
+    }
+  })
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sails-migrations.sails_migrations.rollback" id="apidoc.element.sails-migrations.sails_migrations.rollback">
+        function <span class="apidocSignatureSpan">sails-migrations.sails_migrations.</span>rollback
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function rollback(){
+  return ConfigLoader.load().then(function(config){
+    return knex(config).migrate.rollback();
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sails-migrations.sails_migrations.status" id="apidoc.element.sails-migrations.sails_migrations.status">
+        function <span class="apidocSignatureSpan">sails-migrations.sails_migrations.</span>status
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function status() {
+  return ConfigLoader.load().then(function (config) {
+    var knexInstance = knex(config);
+    return knexInstance.schema.hasTable(config.migrations.tableName).then(function(exists) {
+      if(exists) {
+        return knexInstance.select(&#x27;*&#x27;).from(config.migrations.tableName).orderBy(&#x27;id&#x27;)
+      } else {
+        return []
+      }
+    }).then(function(completed) {
+      return [knexInstance.migrate._listAll(), completed]
+    })
+  });
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>

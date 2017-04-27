@@ -1,6 +1,6 @@
 # npmdoc-sails-migrations
 
-#### api documentation for  [sails-migrations (v2.0.10)](https://github.com/BlueHotDog/sails-migrations)  [![npm package](https://img.shields.io/npm/v/npmdoc-sails-migrations.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-sails-migrations) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-sails-migrations.svg)](https://travis-ci.org/npmdoc/node-npmdoc-sails-migrations)
+#### basic api documentation for  [sails-migrations (v2.0.10)](https://github.com/BlueHotDog/sails-migrations)  [![npm package](https://img.shields.io/npm/v/npmdoc-sails-migrations.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-sails-migrations) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-sails-migrations.svg)](https://travis-ci.org/npmdoc/node-npmdoc-sails-migrations)
 
 #### The missing, migrations, arm of the octopus
 
